@@ -1,11 +1,62 @@
-html {
-  /* padding will stretch the page 
+html,
+body {
+    /* padding will stretch the page 
     prevents from happening horizontal scroll bar*/
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh; /*stretch the height 100%*/
+    box-sizing: border-box;
 }
 
-body {
-  margin: 0;
-  min-height: 100vh; /*stretch the height 100%*/
-  background-color: gray;
+#container {
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: 10% 80% 10%;
+    grid-template-rows: 5% 90% 5%;
+    grid-template-areas: "header header header" ". content ." "footer footer footer";
+}
+
+#header {
+    grid-area: header;
+    background: rgba(0, 0, 0, 0.678);
+    color: white;
+    text-align: center;
+    padding: 0.4rem;
+    font-family: Georgia, 'Times New Roman', Times, serif
+}
+
+#content {
+    grid-area: content;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center
+}
+
+form #form-item {
+    padding-right: 10px;
+}
+
+#footer {
+
+    grid-area: footer;
+    background: rgba(0, 0, 0, 0.719);
+    color: white;
+    text-align: center;
+    padding: 0.4rem;
+}
+
+@media(max-width: 414px) {
+    form {
+        display: inline-block;
+        justify-content: center
+    }
+
+    form #form-item {
+        padding-bottom: 5px;
+    }
+
 }
