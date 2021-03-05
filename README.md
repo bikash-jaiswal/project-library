@@ -1,6 +1,6 @@
 # From The Odin Project's curriculum
 
-- Live demo books
+- [Live demo](https://bikash-jaiswal.github.io/project-library/)
 
 # Assignment
 
