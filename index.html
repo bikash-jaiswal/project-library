@@ -26,30 +26,40 @@
             <p>You can also view the Github repository of this project.</p>
 
             <!-- button to add new book in table -->
-            <div id="add-btn">
+            <div id="btn">
                 <button class="plusNewBook"><i class="fas fa-plus"> New Book </i></button>
             </div>
 
             <!-- <div id="form" class="form"></div> -->
             <!-- TODO: Change the layout display the book inofmation in table view just like todo task -->
 
-            <div id="user-form" class="user-form">
-                <form action="" class="form-container">
+            <div id="user-form" class="user-form hide">
+                <form action="/" class="form-container">
+                    <h2>Add New Book</h2>
                     <div id="form-item">
-                        <label for="title">What is the name of the book?</label><br>
-                        <input type="text" id="title" name="title" value="The Hobbit">
+                        <!-- <label for="title">What is the name of the book?</label><br> -->
+                        <input type="text" placeholder="Title" id="title" name="title" required>
                     </div>
                     <div id="form-item">
-                        <label for="author">Author</label><br>
-                        <input type="text" id="author" name="author" value="J.R.R. Tolkien">
+                        <!-- <label for="author">What is the name of the book's Author?</label><br> -->
+                        <input type="text" id="author" name="author" placeholder="Author" required>
                     </div>
                     <div id="form-item">
-                        <label for="pageNo">page#</label><br>
-                        <input type="text" id="pageNo" name="page#" value="295">
+                        <!-- <label for="pageNo">page#</label><br> -->
+                        <input type="text" id="pageNo" name="page#" placeholder="Page#" required>
                     </div>
-                    <div id="form-item">
-                        <label for="status">Status</label><br>
-                        <input type="text" id="status" name="Status" value="Read">
+                    <div id="form-item" class="status">
+                        <fieldset>
+                            <legend>Status of Book</legend>
+                            <input type="radio" name="status" id="read">
+                            <label for="read">Read</label><br>
+                            <input type="radio" name="status" id="unread">
+                            <label for="unread">Not read</label>
+                        </fieldset>
+
+                    </div>
+                    <div id="btn" class="submit-btn">
+                        <input type="submit" class="plusNewBook" onclick="submit()" value="submit"></input>
                     </div>
                 </form>
             </div>
